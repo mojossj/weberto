@@ -105,10 +105,8 @@ header nav ul li a:hover {
 
   .hero-image {
     margin-top: 30px;
-  }
-}
 
-.projects {
+  .projects {
   padding: 80px 0;
   background-color: #fff;
 }
@@ -170,3 +168,7 @@ header nav ul li a:hover {
 .project-link:hover {
   background-color: #0056b3;
 }
+
+  }
+}
+
