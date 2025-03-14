@@ -5,31 +5,26 @@
     box-sizing: border-box;
 }
 
-/* Stili di base per la modalità chiara */
+/* Variabili Globali */
 :root {
-    --background-color: #f5f5f7; /* Grigio MacBook */
-    --text-color: #1d1d1f; /* Testo scuro */
-    --header-bg: #000000; /* Header nero */
-    --header-text: #ffffff; /* Testo bianco */
-    --link-color: #007BFF; /* Colore link */
-    --link-hover-color: #0056b3; /* Colore link al passaggio del mouse */
-    --button-bg: #e1306c; /* Colore del bottone Instagram */
-    --button-hover-bg: #c13584; /* Colore del bottone Instagram al passaggio del mouse */
+    /* Colori Light Mode */
+    --background-color: #f5f5f7;
+    --text-color: #1d1d1f;
+    --header-bg: #000000;
+    --button-bg: #007BFF;
+    --button-hover-bg: #0056b3;
 }
 
-/* Stili per la modalità scura */
+/* Dark Mode */
 .dark-mode {
-    --background-color: #1e1e1e; /* Sfondo scuro */
-    --text-color: #ffffff; /* Testo bianco */
-    --header-bg: #121212; /* Header più scuro */
-    --header-text: #ffffff; /* Testo bianco */
-    --link-color: #e1306c; /* Colore link */
-    --link-hover-color: #c13584; /* Colore link al passaggio del mouse */
-    --button-bg: #e1306c; /* Colore del bottone Instagram */
-    --button-hover-bg: #c13584; /* Colore del bottone Instagram al passaggio del mouse */
+    --background-color: #1e1e1e;
+    --text-color: #ffffff;
+    --header-bg: #121212;
+    --button-bg: #e1306c;
+    --button-hover-bg: #c13584;
 }
 
-/* Applica i colori alle sezioni del sito */
+/* Stili Generali */
 body {
     background-color: var(--background-color);
     color: var(--text-color);
@@ -37,7 +32,6 @@ body {
     line-height: 1.6;
 }
 
-/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -49,20 +43,42 @@ body {
     background-color: var(--header-bg);
     padding: 60px 0;
     text-align: center;
+    color: white;
 }
 
 .header h1 {
     font-size: 48px;
     margin-bottom: 10px;
-    color: var(--header-text);
 }
 
-.header p {
-    font-size: 20px;
-    color: var(--header-text);
+/* Bottoni */
+.action-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
 
-/* Sections */
+.action-button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Bottone Instagram (Posizione Personalizzata) */
+#contact .action-button {
+    position: static;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Sezioni */
 .section {
     padding: 80px 0;
     text-align: center;
@@ -73,40 +89,15 @@ body {
     margin-bottom: 20px;
 }
 
-.section p {
-    font-size: 18px;
-    color: var(--text-color);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Immagine responsive */
+/* Immagine */
 .responsive-image {
     max-width: 100%;
     height: auto;
-    display: block;
-    margin: 20px auto;
     border-radius: 10px;
+    margin: 20px 0;
 }
 
-/* Bottone Instagram */
-.instagram-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: var(--button-bg);
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-}
-
-.instagram-button:hover {
-    background-color: var(--button-hover-bg);
-}
-
-/* Fun Section */
+/* GIF */
 .fun-section {
     padding: 40px 0;
     background-color: var(--header-bg);
@@ -125,45 +116,18 @@ body {
     background-color: var(--header-bg);
     padding: 20px 0;
     text-align: center;
-    font-size: 14px;
-    color: var(--header-text);
+    color: white;
 }
 
-/* Stile per il pulsante Dark Mode */
-.dark-mode-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: var(--link-color);
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.dark-mode-toggle:hover {
-    background-color: var(--link-hover-color);
-}
-
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
     .header h1 {
         font-size: 36px;
     }
 
-    .header p {
-        font-size: 16px;
-    }
-
-    .section h2 {
-        font-size: 28px;
-    }
-
-    .section p {
-        font-size: 16px;
+    .action-button {
+        font-size: 14px;
+        padding: 8px 16px;
     }
 
     .fun-gif {
