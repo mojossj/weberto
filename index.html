@@ -38,7 +38,10 @@
         <div class="container">
             <h2>Contattami</h2>
             <p>Puoi trovarmi su Instagram:</p>
-            <a href="https://instagram.com/matteoshaki10" class="instagram-link" target="_blank">@SHAKIHACK</a>
+            <!-- Bottone con emoji del pagliaccio -->
+            <a href="https://instagram.com/matteoshaki10" class="instagram-button" target="_blank">
+                🃏 Matteo Shaki
+            </a>
         </div>
     </section>
 
@@ -58,18 +61,18 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Interactivity -->
-    <script src="script.js"></script>
     <!-- JavaScript per la Dark Mode -->
     <script>
         const toggleDarkMode = document.getElementById('toggle-dark-mode');
         const body = document.body;
 
+        // Verifica se l'utente ha già una preferenza salvata
         if (localStorage.getItem('darkMode') === 'true') {
             body.classList.add('dark-mode');
             toggleDarkMode.textContent = '☀️ Light Mode';
         }
 
+        // Aggiungi un listener per il click sul pulsante
         toggleDarkMode.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
             const isDarkMode = body.classList.contains('dark-mode');
