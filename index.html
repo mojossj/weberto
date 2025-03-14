@@ -13,7 +13,7 @@
 </head>
 <body>
     <!-- Pulsante Dark Mode -->
-    <button id="toggle-dark-mode" class="dark-mode-toggle">🌙 Dark Mode</button>
+    <button id="toggle-dark-mode" class="action-button">🌙 Dark Mode</button>
 
     <!-- Header -->
     <header class="header">
@@ -28,7 +28,6 @@
         <div class="container">
             <h2>Chi Sono?</h2>
             <p>Ciao, sono Matteo Shaki, un Hackerino tutto fare. Mi piace esplorare nuovi mondi digitali e risolvere problemi complessi(?).</p>
-            <!-- Immagine ottimizzata per mobile -->
             <img src="https://github.com/mojossj/weberto/blob/main/shak%20(1).jpeg?raw=true" alt="Matteo Shaki" class="responsive-image">
         </div>
     </section>
@@ -38,10 +37,8 @@
         <div class="container">
             <h2>Contattami</h2>
             <p>Puoi trovarmi su Instagram:</p>
-            <!-- Bottone con emoji del pagliaccio -->
-            <a href="https://instagram.com/matteoshaki10" class="instagram-button" target="_blank">
-                🃏 Matteo Shaki
-            </a>
+            <!-- Bottone Instagram Stile Toggle -->
+            <a href="https://instagram.com/matteoshaki10" class="action-button" target="_blank">🃏 Matteo Shaki</a>
         </div>
     </section>
 
@@ -61,18 +58,19 @@
         </div>
     </footer>
 
-    <!-- JavaScript per la Dark Mode -->
+    <!-- JavaScript -->
     <script>
+        // Dark Mode Toggle
         const toggleDarkMode = document.getElementById('toggle-dark-mode');
         const body = document.body;
 
-        // Verifica se l'utente ha già una preferenza salvata
+        // Carica la preferenza salvata
         if (localStorage.getItem('darkMode') === 'true') {
             body.classList.add('dark-mode');
             toggleDarkMode.textContent = '☀️ Light Mode';
         }
 
-        // Aggiungi un listener per il click sul pulsante
+        // Gestione click
         toggleDarkMode.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
             const isDarkMode = body.classList.contains('dark-mode');
