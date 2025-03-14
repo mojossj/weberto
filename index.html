@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Benvenuto nel sito di Matteo Shaki, hacker e appassionato di tecnologia.">
-    <meta name="keywords" content="Matteo Shaki, Hacker, Tecnologia, Instagram, SHAKIHACK">
+    <meta name="description" content="Benvenuto nel sito di Matteo Shaki">
+    <meta name="keywords" content="Matteo Shaki, Hacker, Tecnologia">
     <meta name="author" content="Matteo Shaki">
-    <title>Matteo Shaki - Hacker & Tech Enthusiast</title>
+    <title>Matteo Shaki - Hacker</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Audio di sottofondo -->
+    <audio autoplay loop hidden>
+        <source src="background-music.mp3" type="audio/mpeg">
+    </audio>
 </head>
 <body>
-    <!-- Pulsante Dark Mode -->
     <button id="toggle-dark-mode" class="action-button">🌙 Dark Mode</button>
 
-    <!-- Header -->
     <header class="header">
         <div class="container">
             <h1>MATTEO SHAKI</h1>
@@ -23,60 +25,40 @@
         </div>
     </header>
 
-    <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
             <h2>Chi Sono?</h2>
             <p>Ciao, sono Matteo Shaki, un Hackerino tutto fare. Mi piace esplorare nuovi mondi digitali e risolvere problemi complessi(?).</p>
-            <img src="https://github.com/mojossj/weberto/blob/main/shak%20(1).jpeg?raw=true" alt="Matteo Shaki" class="responsive-image">
+            <img src="https://github.com/mojossj/weberto/blob/main/shak%20(1).jpeg?raw=true" 
+                 alt="Matteo Shaki" 
+                 class="responsive-image">
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="section">
         <div class="container">
             <h2>Contattami</h2>
-            <p>Puoi trovarmi su Instagram:</p>
-            <!-- Bottone Instagram Stile Toggle -->
-            <a href="https://instagram.com/matteoshaki10" class="action-button" target="_blank">🃏 Matteo Shaki</a>
+            <a href="https://instagram.com/matteoshaki10" 
+               class="action-button" 
+               target="_blank">🃏 Matteo Shaki</a>
         </div>
     </section>
 
-    <!-- Fun Section -->
     <section class="fun-section">
         <div class="container">
-            <img src="https://media.tenor.com/6Wyw97yAVyIAAAAS/veramente-euforico-sono-veramente-euforico.gif" alt="Euforico" class="fun-gif">
-            <img src="https://media.tenor.com/6Wyw97yAVyIAAAAS/veramente-euforico-sono-veramente-euforico.gif" alt="Euforico" class="fun-gif">
-            <img src="https://media.tenor.com/6Wyw97yAVyIAAAAS/veramente-euforico-sono-veramente-euforico.gif" alt="Euforico" class="fun-gif">
+            <img src="https://media.tenor.com/6Wyw97yAVyIAAAAS/veramente-euforico-sono-veramente-euforico.gif" 
+                 alt="Euforico" 
+                 class="fun-gif">
+            <!-- Aggiungi altre due GIF qui -->
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2023 Matteo Shaki. Tutti i diritti riservati.</p>
+            <p>&copy; 2023 Matteo Shaki</p>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script>
-        // Dark Mode Toggle
-        const toggleDarkMode = document.getElementById('toggle-dark-mode');
-        const body = document.body;
-
-        // Carica la preferenza salvata
-        if (localStorage.getItem('darkMode') === 'true') {
-            body.classList.add('dark-mode');
-            toggleDarkMode.textContent = '☀️ Light Mode';
-        }
-
-        // Gestione click
-        toggleDarkMode.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            const isDarkMode = body.classList.contains('dark-mode');
-            toggleDarkMode.textContent = isDarkMode ? '☀️ Light Mode' : '🌙 Dark Mode';
-            localStorage.setItem('darkMode', isDarkMode);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
