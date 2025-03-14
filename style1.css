@@ -72,7 +72,7 @@ body {
 /* Stile per desktop */
 @media (min-width: 769px) {
     .responsive-image {
-        max-width: 50%; /* Riduci la larghezza dell'immagine su desktop */
+        max-width: 80%; /* Riduci la larghezza dell'immagine su desktop */
     }
 }
 
