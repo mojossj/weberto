@@ -12,6 +12,8 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
+     <!-- Pulsante Dark Mode -->
+    <button id="toggle-dark-mode" class="dark-mode-toggle">🌙 Dark Mode</button>
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -57,5 +59,22 @@
 
     <!-- JavaScript for Interactivity -->
     <script src="script.js"></script>
+    <!-- JavaScript per la Dark Mode -->
+    <script>
+        const toggleDarkMode = document.getElementById('toggle-dark-mode');
+        const body = document.body;
+
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            toggleDarkMode.textContent = '☀️ Light Mode';
+        }
+
+        toggleDarkMode.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            toggleDarkMode.textContent = isDarkMode ? '☀️ Light Mode' : '🌙 Dark Mode';
+            localStorage.setItem('darkMode', isDarkMode);
+        });
+    </script>
 </body>
 </html>
