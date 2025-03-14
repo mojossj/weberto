@@ -5,118 +5,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f5f5f7; /* Grigio MacBook */
-    color: #1d1d1f; /* Testo scuro per contrasto */
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Header */
-.header {
-    background-color: #000000;
-    padding: 60px 0;
-    text-align: center;
-}
-
-.header h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    color: #ffffff; /* Testo bianco per contrasto */
-}
-
-.header p {
-    font-size: 20px;
-    color: #cccccc;
-}
-
-/* Sections */
-.section {
-    padding: 80px 0;
-    text-align: center;
-}
-
-.section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #1d1d1f; /* Testo scuro per contrasto */
-}
-
-.section p {
-    font-size: 18px;
-    color: #1d1d1f; /* Testo scuro per contrasto */
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Immagine responsive */
-.responsive-image {
-    max-width: 100%; /* L'immagine non supererà la larghezza del contenitore */
-    height: auto; /* Mantiene le proporzioni */
-    display: block; /* Rimuove lo spazio extra sotto l'immagine */
-    margin: 20px auto; /* Centra l'immagine e aggiunge spazio sopra e sotto */
-    border-radius: 10px; /* Bordi arrotondati */
-}
-
-/* Stile per dispositivi mobili */
-@media (max-width: 768px) {
-    .responsive-image {
-        max-width: 80%; /* Riduci la larghezza dell'immagine su mobile */
-    }
-}
-
-/* Stile per desktop */
-@media (min-width: 769px) {
-    .responsive-image {
-        max-width: 50%; /* Riduci la larghezza dell'immagine su desktop */
-    }
-}
-
-/* Link Instagram */
-.instagram-link {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #e1306c;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-}
-
-.instagram-link:hover {
-    background-color: #c13584;
-}
-
-/* Fun Section */
-.fun-section {
-    padding: 40px 0;
-    background-color: #000000;
-    text-align: center;
-}
-
-.fun-gif {
-    width: 150px;
-    height: auto;
-    margin: 10px;
-    border-radius: 10px;
-}
-
-/* Footer */
-.footer {
-    background-color: #000000;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 14px;
-    color: #cccccc;
-}
-
 /* Stili di base per la modalità chiara */
 :root {
     --background-color: #f5f5f7; /* Grigio MacBook */
@@ -172,6 +60,109 @@ a:hover {
 
 .dark-mode-toggle:hover {
     background-color: var(--link-hover-color);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 20px;
+    color: var(--header-text);
+}
+
+/* Sections */
+.section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 18px;
+    color: var(--text-color);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Immagine responsive */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Stile per dispositivi mobili */
+@media (max-width: 768px) {
+    .responsive-image {
+        max-width: 80%;
+    }
+}
+
+/* Stile per desktop */
+@media (min-width: 769px) {
+    .responsive-image {
+        max-width: 50%;
+    }
+}
+
+/* Link Instagram */
+.instagram-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--link-color);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.instagram-link:hover {
+    background-color: var(--link-hover-color);
+}
+
+/* Fun Section */
+.fun-section {
+    padding: 40px 0;
+    background-color: var(--header-bg);
+    text-align: center;
+}
+
+.fun-gif {
+    width: 150px;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--header-bg);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    color: var(--header-text);
 }
 
 /* Responsive Design */
