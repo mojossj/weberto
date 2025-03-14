@@ -53,13 +53,30 @@ body {
     margin: 0 auto;
 }
 
-.profile-image {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 20px;
+/* Immagine responsive */
+.responsive-image {
+    max-width: 100%; /* L'immagine non supererà la larghezza del contenitore */
+    height: auto; /* Mantiene le proporzioni */
+    display: block; /* Rimuove lo spazio extra sotto l'immagine */
+    margin: 20px auto; /* Centra l'immagine e aggiunge spazio sopra e sotto */
+    border-radius: 10px; /* Bordi arrotondati */
 }
 
+/* Stile per dispositivi mobili */
+@media (max-width: 768px) {
+    .responsive-image {
+        max-width: 80%; /* Riduci la larghezza dell'immagine su mobile */
+    }
+}
+
+/* Stile per desktop */
+@media (min-width: 769px) {
+    .responsive-image {
+        max-width: 50%; /* Riduci la larghezza dell'immagine su desktop */
+    }
+}
+
+/* Link Instagram */
 .instagram-link {
     display: inline-block;
     margin-top: 20px;
@@ -114,10 +131,6 @@ body {
 
     .section p {
         font-size: 16px;
-    }
-
-    .profile-image {
-        width: 200px;
     }
 
     .fun-gif {
