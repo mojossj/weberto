@@ -8,12 +8,12 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #1e1e1e;
-    color: #ffffff;
+    background-color: #f5f5f7; /* Grigio MacBook */
+    color: #1d1d1f; /* Testo scuro per contrasto */
 }
 
 .container {
-    max-width: 200px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -28,6 +28,7 @@ body {
 .header h1 {
     font-size: 48px;
     margin-bottom: 10px;
+    color: #ffffff; /* Testo bianco per contrasto */
 }
 
 .header p {
@@ -44,11 +45,12 @@ body {
 .section h2 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: #1d1d1f; /* Testo scuro per contrasto */
 }
 
 .section p {
     font-size: 18px;
-    color: #cccccc;
+    color: #1d1d1f; /* Testo scuro per contrasto */
     max-width: 600px;
     margin: 0 auto;
 }
@@ -72,7 +74,7 @@ body {
 /* Stile per desktop */
 @media (min-width: 769px) {
     .responsive-image {
-        max-width: 80%; /* Riduci la larghezza dell'immagine su desktop */
+        max-width: 50%; /* Riduci la larghezza dell'immagine su desktop */
     }
 }
 
@@ -114,24 +116,25 @@ body {
     font-size: 14px;
     color: #cccccc;
 }
+
 /* Stili di base per la modalità chiara */
 :root {
-    --background-color: #ffffff;
-    --text-color: #000000;
-    --header-bg: #000000;
-    --header-text: #ffffff;
-    --link-color: #007BFF;
-    --link-hover-color: #0056b3;
+    --background-color: #f5f5f7; /* Grigio MacBook */
+    --text-color: #1d1d1f; /* Testo scuro */
+    --header-bg: #000000; /* Header nero */
+    --header-text: #ffffff; /* Testo bianco */
+    --link-color: #007BFF; /* Colore link */
+    --link-hover-color: #0056b3; /* Colore link al passaggio del mouse */
 }
 
 /* Stili per la modalità scura */
 .dark-mode {
-    --background-color: #1e1e1e;
-    --text-color: #ffffff;
-    --header-bg: #121212;
-    --header-text: #ffffff;
-    --link-color: #e1306c;
-    --link-hover-color: #c13584;
+    --background-color: #1e1e1e; /* Sfondo scuro */
+    --text-color: #ffffff; /* Testo bianco */
+    --header-bg: #121212; /* Header più scuro */
+    --header-text: #ffffff; /* Testo bianco */
+    --link-color: #e1306c; /* Colore link */
+    --link-hover-color: #c13584; /* Colore link al passaggio del mouse */
 }
 
 /* Applica i colori alle sezioni del sito */
@@ -170,6 +173,7 @@ a:hover {
 .dark-mode-toggle:hover {
     background-color: var(--link-hover-color);
 }
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .header h1 {
