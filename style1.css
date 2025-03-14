@@ -13,6 +13,8 @@
     --header-text: #ffffff; /* Testo bianco */
     --link-color: #007BFF; /* Colore link */
     --link-hover-color: #0056b3; /* Colore link al passaggio del mouse */
+    --button-bg: #e1306c; /* Colore del bottone Instagram */
+    --button-hover-bg: #c13584; /* Colore del bottone Instagram al passaggio del mouse */
 }
 
 /* Stili per la modalità scura */
@@ -23,43 +25,16 @@
     --header-text: #ffffff; /* Testo bianco */
     --link-color: #e1306c; /* Colore link */
     --link-hover-color: #c13584; /* Colore link al passaggio del mouse */
+    --button-bg: #e1306c; /* Colore del bottone Instagram */
+    --button-hover-bg: #c13584; /* Colore del bottone Instagram al passaggio del mouse */
 }
 
 /* Applica i colori alle sezioni del sito */
 body {
     background-color: var(--background-color);
     color: var(--text-color);
-}
-
-.header {
-    background-color: var(--header-bg);
-    color: var(--header-text);
-}
-
-a {
-    color: var(--link-color);
-}
-
-a:hover {
-    color: var(--link-hover-color);
-}
-
-/* Stile per il pulsante Dark Mode */
-.dark-mode-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: var(--link-color);
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.dark-mode-toggle:hover {
-    background-color: var(--link-hover-color);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
 }
 
 /* Container */
@@ -71,6 +46,7 @@ a:hover {
 
 /* Header */
 .header {
+    background-color: var(--header-bg);
     padding: 60px 0;
     text-align: center;
 }
@@ -78,6 +54,7 @@ a:hover {
 .header h1 {
     font-size: 48px;
     margin-bottom: 10px;
+    color: var(--header-text);
 }
 
 .header p {
@@ -112,34 +89,21 @@ a:hover {
     border-radius: 10px;
 }
 
-/* Stile per dispositivi mobili */
-@media (max-width: 768px) {
-    .responsive-image {
-        max-width: 80%;
-    }
-}
-
-/* Stile per desktop */
-@media (min-width: 769px) {
-    .responsive-image {
-        max-width: 50%;
-    }
-}
-
-/* Link Instagram */
-.instagram-link {
+/* Bottone Instagram */
+.instagram-button {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: var(--link-color);
+    background-color: var(--button-bg);
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
     font-size: 18px;
+    transition: background-color 0.3s ease;
 }
 
-.instagram-link:hover {
-    background-color: var(--link-hover-color);
+.instagram-button:hover {
+    background-color: var(--button-hover-bg);
 }
 
 /* Fun Section */
@@ -163,6 +127,25 @@ a:hover {
     text-align: center;
     font-size: 14px;
     color: var(--header-text);
+}
+
+/* Stile per il pulsante Dark Mode */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: var(--link-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    background-color: var(--link-hover-color);
 }
 
 /* Responsive Design */
