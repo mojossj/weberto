@@ -55,7 +55,7 @@ body {
 
 /* Immagine responsive */
 .responsive-image {
-    max-width: 30%; /* L'immagine non supererà la larghezza del contenitore */
+    max-width: 100%; /* L'immagine non supererà la larghezza del contenitore */
     height: auto; /* Mantiene le proporzioni */
     display: block; /* Rimuove lo spazio extra sotto l'immagine */
     margin: 20px auto; /* Centra l'immagine e aggiunge spazio sopra e sotto */
