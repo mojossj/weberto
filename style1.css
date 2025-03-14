@@ -114,7 +114,62 @@ body {
     font-size: 14px;
     color: #cccccc;
 }
+/* Stili di base per la modalità chiara */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --header-bg: #000000;
+    --header-text: #ffffff;
+    --link-color: #007BFF;
+    --link-hover-color: #0056b3;
+}
 
+/* Stili per la modalità scura */
+.dark-mode {
+    --background-color: #1e1e1e;
+    --text-color: #ffffff;
+    --header-bg: #121212;
+    --header-text: #ffffff;
+    --link-color: #e1306c;
+    --link-hover-color: #c13584;
+}
+
+/* Applica i colori alle sezioni del sito */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+}
+
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Stile per il pulsante Dark Mode */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: var(--link-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dark-mode-toggle:hover {
+    background-color: var(--link-hover-color);
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .header h1 {
